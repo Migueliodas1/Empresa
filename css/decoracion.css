@@ -1,0 +1,100 @@
+/* Resetear algunos estilos por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables de colores */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --accent-color: #3498db;
+    --text-color: #ecf0f1;
+    --hover-color: #2980b9;
+}
+
+/* Estilos del navbar */
+.navbar {
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Contenido del navbar */
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos del botón hamburguesa */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 100;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 2px;
+    background-color: var(--text-color);
+    margin: 3px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+/* Menú desplegable */
+.menu-items {
+    display: none; /* Ocultar por defecto */
+    position: absolute;
+    top: 70px; /* Ajusta según la altura de la navbar */
+    left: 0;
+    right: 0;
+    background: var(--primary-color);
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; /* Suaviza la aparición */
+}
+
+.menu-items.active {
+    display: flex; /* Mostrar cuando está activo */
+}
+
+.nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    background: var(--hover-color);
+}
+
+/* Ajuste para el contenido debajo del navbar */
+body {
+    padding-top: 80px; /* Espacio para la navbar */
+    background-color: #f8f9fa; /* Fondo de la página */
+}
+
+/* Estilos para las tarjetas y contenedores */
+.container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    margin-top: 2rem;
+}
